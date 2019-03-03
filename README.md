@@ -5,10 +5,17 @@ A minimum implementation version of Egg.js.
 maybe try:
 
 ```bash
-# install dependencies
+# install project dependencies
 yarn
-# or
-npm install
+
+# cd to egg-core dir
+cd packages/egg-core/
+
+# install egg-core dependencies
+yarn
+
+# back to root dir
+cd ../..
 
 # run demo
 npm run demo
