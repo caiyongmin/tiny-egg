@@ -1,0 +1,19 @@
+{
+  "name": "egg-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "caiyongmin <645589265@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "globby": "^8.0.1",
+    "is-type-of": "^1.2.1",
+    "koa": "~2.6.2",
+    "koa-router": "~7.4.0"
+  }
+}

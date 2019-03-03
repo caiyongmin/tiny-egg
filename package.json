@@ -1,0 +1,16 @@
+{
+  "name": "my-egg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "demo": "nodemon example/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "caiyongmin <645589265@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
