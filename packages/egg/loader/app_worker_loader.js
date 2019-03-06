@@ -9,6 +9,7 @@ class AppWorkerLoader extends EggLoader {
    * 加载所有需要加载的文件
    */
   loadAll() {
+    this.loadService();
     this.loadController();
     this.loadRouter();
   }
