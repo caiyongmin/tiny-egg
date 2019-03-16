@@ -36,7 +36,7 @@ Browse page address: http://localhost:8001/. For more pages, please see example/
 - [x] Support load config.
 - [x] Support load app/ctx/request/response/helper extend.
 - [x] Support load plugin.
-  - For the time being, only middleware plugins are supported.
+  - For the time being, only middleware plugins are supported.
 
 ## Directory structure
 
@@ -94,7 +94,7 @@ Browse page address: http://localhost:8001/. For more pages, please see example/
 │       │   ├── basic.js                # 基础工具库
 │       │   ├── context_loader.js       # eggCore contextLoader 加载器，继承自 fileLoader
 │       │   ├── file_loader.js          # eggCore fileLoader
-│       │   └── router.js               # 路由基础类
+│       │   └── router.js               # 路由基础类
 │       ├── package.json
 │       └── yarn.lock
 ├── LICENSE
