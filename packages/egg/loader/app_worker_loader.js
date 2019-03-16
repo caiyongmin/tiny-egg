@@ -9,7 +9,17 @@ class AppWorkerLoader extends EggLoader {
    * 加载所有需要加载的文件
    */
   loadAll() {
+    this.loadPlugin();
+    this.loadConfig();
+
+    this.loadApplicationExtend();
+    this.loadRequestExtend();
+    this.loadResponseExtend();
+    this.loadContextExtend();
+    this.loadHelperExtend();
+
     this.loadService();
+    this.loadMiddleware();
     this.loadController();
     this.loadRouter();
   }

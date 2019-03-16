@@ -14,6 +14,7 @@ const defaultOptions = {
   initializer: null,
   inject: undefined,
   filter: null,
+  call: true,
 };
 
 /**
@@ -29,6 +30,7 @@ class FileLoader {
    * @param {Function} options.initializer - 对加载到的文件内容做自定义处理
    * @param {Object} options.inject - 注入给加载到的文件的函数执行时的参数
    * @param {Function} options.filter - 文件过滤规则
+   * @param {Boolean} options.call - 设置当导出的是函数时，是否需要执行
    */
   constructor(options) {
     if (!options.directory) {
@@ -194,7 +196,7 @@ function getProperties(filepath) {
 /**
  * 根据文件路径得到文件导出的内容
  */
-function getExports(fullpath, { initializer, inject }, pathName) {
+function getExports(fullpath, { initializer, inject, call }, pathName) {
   let exports = require(fullpath);
 
   // 如果指定了 options.initializer，可以对导出的内容做自定义处理
@@ -202,9 +204,17 @@ function getExports(fullpath, { initializer, inject }, pathName) {
     exports = initializer(exports, { path: fullpath, pathName });
   }
 
-  // 如果它是一个函数，将会立即执行
-  if (is.function(exports) && !is.class(exports)) {
-    return exports(inject);
+  // 如果导出的是类、generator 函数和 async 函数
+  if (is.class(exports) || is.generatorFunction(exports) || is.asyncFunction(exports)) {
+    return exports;
+  }
+
+  // 当 call 为 true，才对导出的函数执行
+  if (call && is.function(exports)) {
+    exports = exports(inject);
+    if (exports != null) {
+      return exports;
+    }
   }
 
   return exports;

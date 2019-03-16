@@ -1,0 +1,20 @@
+{
+  "name": "egg-example",
+  "version": "1.0.0",
+  "description": "it's a example demo.",
+  "main": "app.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "node.js",
+    "egg",
+    "egg.js"
+  ],
+  "author": "caiyongmin <645589265@qq.com>",
+  "license": "MIT"
+}

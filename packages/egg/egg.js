@@ -1,13 +1,17 @@
 const EggCore = require('./../egg-core').EggCore;
 const AppWorkerLoader = require('./loader/app_worker_loader');
+const BaseContextClass = require('./utils/base_context_class');
 
 // 找到 egg 中的 EGG_LOADER
 const EGG_LOADER = Symbol.for('egg#loader');
 const EGG_PATH = Symbol.for('egg#path');
+const HELPER = Symbol('Application#Helper');
 
 class EggApplication extends EggCore {
   constructor(options) {
     super(options);
+
+    this.BaseContextClass = BaseContextClass;
 
     this.on('error', err => {
       console.log(err);
@@ -29,6 +33,14 @@ class EggApplication extends EggCore {
 
   get [EGG_PATH]() {
     return __dirname;
+  }
+
+  get Helper() {
+    if (!this[HELPER]) {
+      class Helper {}
+      this[HELPER] = Helper;
+    }
+    return this[HELPER];
   }
 }
 

@@ -11,6 +11,8 @@ server.once('error', err => {
   console.log('[app_worker] server got error: %s, code: %s', err.message, err.code);
   process.exit(1);
 });
+
 server.listen(8001, () => {
   console.log('server started at localhost:8001');
 });
+
