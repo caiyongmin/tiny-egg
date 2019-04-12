@@ -1,7 +1,7 @@
 {
   "name": "egg-example",
   "version": "1.0.0",
-  "description": "it's a example demo.",
+  "description": "it's a example.",
   "main": "app.js",
   "scripts": {
     "test": "no"

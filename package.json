@@ -11,7 +11,10 @@
   "author": "caiyongmin <645589265@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.5.0",
-    "nodemon": "^1.18.6"
+    "jest": "~24.5.0",
+    "nodemon": "~1.18.6"
+  },
+  "dependencies": {
+    "koa-static-cache": "~5.1.2"
   }
 }
