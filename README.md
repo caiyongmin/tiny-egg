@@ -5,6 +5,9 @@ A minimum implementation version of [egg.js](https://eggjs.org/zh-cn/).
 ## Run
 
 ```bash
+# clone project
+git clone git@github.com:caiyongmin/tiny-egg.git
+
 # install dependencies
 npm run bootstrap
 
@@ -13,6 +16,8 @@ npm run demo
 ```
 
 Browse page address: http://localhost:8001/. For more pages, please see example/app/router.js, or add your own page route.
+
+![guide](./doc/guide.gif)
 
 ## Features
 
