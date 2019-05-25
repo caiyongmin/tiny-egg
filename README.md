@@ -2,20 +2,11 @@
 
 A minimum implementation version of Egg.js.
 
-## Try
+## Run
 
 ```bash
-# install project dependencies
-yarn
-
-# cd to egg-core dir
-cd packages/egg-core/
-
-# install egg-core dependencies
-yarn
-
-# back to root dir
-cd ../..
+# install dependencies
+npm run bootstrap
 
 # run demo
 npm run demo
@@ -36,7 +27,7 @@ Browse page address: http://localhost:8001/. For more pages, please see example/
 - [x] Support load config.
 - [x] Support load app/ctx/request/response/helper extend.
 - [x] Support load plugin.
-  - For the time being, only middleware plugins are supported.
+  - Temporary, only middleware plugins are supported.
 
 ## Directory structure
 
@@ -75,7 +66,7 @@ Browse page address: http://localhost:8001/. For more pages, please see example/
 │   │   │   └── app_worker_loader.js    # 加载器
 │   │   ├── package.json
 │   │   └── utils
-│   │       └── base_context_class.js   # Controler、Service 等的基础类
+│   │       └── base_context_class.js   # Controller、Service 等的基础类
 │   └── egg-core
 │       ├── index.js
 │       ├── egg_core.js                 # eggCore 基础类

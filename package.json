@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "bootstrap": "./scripts/bootstrap.sh",
     "demo": "nodemon example/app.js",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "egg.js",
+    "node.js",
+    "framework"
+  ],
   "author": "caiyongmin <645589265@qq.com>",
   "license": "MIT",
   "devDependencies": {

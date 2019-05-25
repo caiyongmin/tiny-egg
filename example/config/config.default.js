@@ -6,7 +6,7 @@ exports.middleware = ['robot', 'staticCache'];
 // setting robot options
 exports.robot = {
   ua: [
-    /Robotspider/i,
+    /robotspider/i,
   ],
 };
 

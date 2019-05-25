@@ -2,9 +2,9 @@ const Service = require('./../../../packages/egg').Service;
 
 class PageService extends Service {
   async home() {
-    const content = await '233';
+    const data = await '\'233\' from page.home service';
 
-    return content;
+    return data;
   }
 }
 
