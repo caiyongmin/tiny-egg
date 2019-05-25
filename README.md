@@ -1,6 +1,6 @@
 # tiny-egg
 
-A minimum implementation version of Egg.js.
+A minimum implementation version of [egg.js](https://eggjs.org/zh-cn/).
 
 ## Run
 

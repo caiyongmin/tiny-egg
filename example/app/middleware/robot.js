@@ -4,7 +4,7 @@ module.exports = (options, app) => {
     const match = options.ua.some(ua => ua.test(source));
     if (match) {
       ctx.status = 403;
-      ctx.message = 'Go away, robot.';
+      ctx.message = 'robot, big brother is watching you!';
     } else {
       await next();
     }
